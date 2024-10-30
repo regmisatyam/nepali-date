@@ -591,24 +591,26 @@
 }));
 
 
-const nepaliDate = new NepaliDate(); // Initialize NepaliDate
-
-    const dateJson = {
-        year: nepaliDate.format('YYYY', 'np'),
-        year_en: nepaliDate.format('YYYY', 'en'),
-        mnth: nepaliDate.format('MM', 'np'), 
-        mnth_en: nepaliDate.format('MM', 'en'), 
-        day: nepaliDate.format('D', 'np'),
-        day_en: nepaliDate.format('D', 'en'),
-        week: nepaliDate.format('ddd', 'np'),
-        week_en: nepaliDate.format('ddd', 'en'),
-        mnth_txt: nepaliDate.format('MMMM', 'np'),
-        mnth_txt_day: nepaliDate.format('MMMM D', 'np'),
-        mnth_txt_en: nepaliDate.format('MMMM', 'en'),
-        mnth_txt_en_day: nepaliDate.format('MMMM D', 'en'),
-        full_date: nepaliDate.format('YYYY/MM/D', 'np'),
-        full_date_mnth: nepaliDate.format('YYYY MMMM D', 'np'),
-        full_date_mnth_week: nepaliDate.format('YYYY MMMM D, ddd', 'np'),
-        full_date_en: nepaliDate.format('YYYY-MM-D', 'en')
-    };
- document.getElementById('nepaliDateJson').textContent = JSON.stringify(dateJson, null, 2);
+ (function() {
+            const nepaliDate = new NepaliDate(); // Assuming NepaliDate is defined
+            const dateJson = {
+                year: nepaliDate.format('YYYY', 'np'),
+                year_en: nepaliDate.format('YYYY', 'en'),
+                mnth: nepaliDate.format('MM', 'np'), 
+                mnth_en: nepaliDate.format('MM', 'en'), 
+                day: nepaliDate.format('D', 'np'),
+                day_en: nepaliDate.format('D', 'en'),
+                week: nepaliDate.format('ddd', 'np'),
+                week_en: nepaliDate.format('ddd', 'en'),
+                mnth_txt: nepaliDate.format('MMMM', 'np'),
+                mnth_txt_day: nepaliDate.format('MMMM D', 'np'),
+                mnth_txt_en: nepaliDate.format('MMMM', 'en'),
+                mnth_txt_en_day: nepaliDate.format('MMMM D', 'en'),
+                full_date: nepaliDate.format('YYYY/MM/D', 'np'),
+                full_date_mnth: nepaliDate.format('YYYY MMMM D', 'np'),
+                full_date_mnth_week: nepaliDate.format('YYYY MMMM D, ddd', 'np'),
+                full_date_en: nepaliDate.format('YYYY-MM-D', 'en')
+            };
+            
+            document.getElementById('nepaliDateJson').textContent = JSON.stringify(dateJson, null, 2);
+        })();
